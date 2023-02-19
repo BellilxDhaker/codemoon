@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chatbot</title>
+	<link rel="stylesheet" type="text/css" href="style2.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<!--<script language ="javascript" src="test.src"></script>-->
+
+
+<body>
+	<header>
+		<h1>Speed Demons Chatbot</h1>
+		<img src="chat.jpg" width="200px" align="right"  height="100px" >
+        <P><h4>Description : </h4>Our website is dedicated to helping YouTubers improve their channels and increase their views.</P>
+        <p><strong>Beginner to experienced creators, we offer valuable resources and a supportive community to help you succeed on YouTube.</strong></p>
+	</header>
+	<div class="chat-container">
+		<div class="chat-history">
+			<div class="chat-message incoming">
+				<p>Hello, how can I help you today?</p>
+			</div>
+            <script>
+                function sit() 
+                {
+                const form = document.getElementById('chat-form');
+                form.addEventListener('submit', function(event) {
+                  event.preventDefault();
+                  const category = document.querySelector('input[name="help"]:checked').value;
+                  let redirectUrl = '';
+                  if (category === 'gaming') {
+                    redirectUrl = 'gaming.html';
+                  } else if (category === 'education') {
+                    redirectUrl = 'education.html';
+                  } else if (category === 'technology') {
+                    redirectUrl = 'technology.html';
+                  } else if (category === 'Beauty') {
+                    redirectUrl = 'beauty.html';
+                  } else if (category === 'Food') {
+                    redirectUrl = 'food.html';
+                  } else if (category === 'Comedy') {
+                    redirectUrl = 'comedy.html';
+                  } else if (category === 'Travel') {
+                    redirectUrl = 'travel.html';
+                  } else if (category === 'music') {
+                    redirectUrl = 'music.html';
+                  } else if (category === 'Other') {
+                    redirectUrl = 'other.html';
+                  }
+                  window.location.href = redirectUrl;
+                });
+            }
+              </script>
+               
+			<div class="chat-message outgoing">
+				<form id="chat-form" onsubmit="return sit()">
+					<label><strong>Choose Category : </strong></label>
+					<div class="radio-buttons">
+						<input type="radio" name="help" value="gaming">Gaming
+                        <br>
+						<input type="radio" name="help" value="education">Education
+                        <br>
+						<input type="radio" name="help" value="technology">Technology
+						<br>
+                        <input type="radio" name="help" value="Beauty">Beauty
+                        <br>
+                        <input type="radio" name="help" value="Food">Food
+						<br>
+                        <input type="radio" name="help" value="Comedy">Comedy
+						<br>
+                        <input type="radio" name="help" value="Travel">Travel
+						<br>
+                        <input type="radio" name="help" value="music">Music
+                        <br>
+                        <input type="radio" name="help" value="Other">Other
+					</div>
+                    <br>
+					<label for="message">Describe video idea :</label>
+					<textarea id="message" name="message" placeholder="Type your ideas..."></textarea>
+					<button type="submit"><strong>Generate</strong></button>
+					<button type="reset">Reset</button>
+				</form>
+			</div>
+			<div class="chat-message incoming">
+				<p>If you have any problem contact us We will get back to you as soon as possible.
+                    Thank you for your message.</p>
+			</div>
+		</div>
+		
+	</div>
+    <footer class="footer">
+        <h3>Contact Us</h3>
+        <p>1234 EPI Street, Sousse</p>
+        <p>Phone:20 482 722</p>
+        <p>Email: speeddemons@chatbot.com</p>
+    </footer>
+</body>
+</html>
